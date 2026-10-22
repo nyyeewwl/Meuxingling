@@ -320,7 +320,6 @@ end
 _G.AimRenderBotoes()
 status.Text = "STATUS: idle"
 
-print("[PARTE 1] Interface base carregada. Cole a PARTE 2 agora.")
 -- ============================================================
 --  PARTE 2 / 3 — Sliders, campo de velocidade, minimizar, drag, fechar
 --  AIMBOT + ESP + NOCLIP + VELOCIDADE — v21
@@ -331,12 +330,6 @@ local Players          = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
-
--- Verifica Parte 1
-if not _G.AimState or not _G.AimBody then
-    warn("[PARTE 2] Execute a PARTE 1 primeiro!")
-    return
-end
 
 local State = _G.AimState
 local C     = _G.AimConst
@@ -689,7 +682,6 @@ closeBtn.MouseButton1Click:Connect(function()
     if _G.AimFovGui then _G.AimFovGui:Destroy() end
 end)
 
-print("[PARTE 2] Sliders, campo e controles carregados. Cole a PARTE 3 agora.")
 -- ============================================================
 --  PARTE 3 / 3 — Lógica (aimbot, ESP, noclip, velocidade, loops)
 --  AIMBOT + ESP + NOCLIP + VELOCIDADE — v21
@@ -703,12 +695,6 @@ local Workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
 local camera = Workspace.CurrentCamera
-
--- Verifica Partes 1 e 2
-if not _G.AimState or not _G.AimGui or not _G.AimSpeedBox then
-    warn("[PARTE 3] Execute a PARTE 1 e a PARTE 2 primeiro!")
-    return
-end
 
 local State = _G.AimState
 local C     = _G.AimConst
